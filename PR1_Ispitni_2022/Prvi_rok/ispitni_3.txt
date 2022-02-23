@@ -1,0 +1,20 @@
+#include < iostream >
+#include < iomanip >
+using namespace std;
+int odabir() {
+	int br;
+	cout << "Koji clan Fibonaccijevog niza zelite: ";
+	cin >> br;
+	return br;
+}
+int Fibonacci(int br) {
+	if (br <= 2)
+		return 1;
+	return Fibonacci(br - 2) + Fibonacci(br - 1);
+}
+int main() {
+	int clan = odabir();
+	cout << clan << "-ti clan Fibonaccijevog niza iznosi: " << Fibonacci(clan) << endl;
+	system("pause>0");
+	return false;
+}
